@@ -10,6 +10,7 @@
     "start:health-plane": "node src/health/EdgeSignalIngestor.js",
     "start:policy-engine": "node src/security/SwarmPolicyEngine.js",
     "start:anchor-gateway": "node src/anchor/AnchorGateway.js",
+    "start:jetson-agent": "node src/edge/JetsonEdgeAgent.js",
     "plan": "node src/cli/cyberkube-plan.js",
     "apply": "node src/cli/cyberkube-apply.js",
     "audit:run": "node src/cli/cyberkube-audit-run.js",
