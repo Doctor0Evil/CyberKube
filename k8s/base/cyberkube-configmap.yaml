@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cyberkube-config
+  namespace: cyberkube
+data:
+  CYBERKUBE_MODE: "human-integrated"
+  CYBERKUBE_LOG_LEVEL: "info"
+  CYBERKUBE_AUDIT_ENABLED: "true"
