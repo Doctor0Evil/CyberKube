@@ -1,0 +1,31 @@
+{
+  "name": "cyberkube",
+  "version": "0.1.0",
+  "description": "CyberKube: nanorobotic cybernetic-swarm orchestration layer for augmented citizens with neurorights-bound safety, sovereignty, and audit.",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start:orchestrator": "node src/orchestrator/SwarmScheduler.js",
+    "start:health-plane": "node src/health/EdgeSignalIngestor.js",
+    "start:policy-engine": "node src/security/SwarmPolicyEngine.js",
+    "start:anchor-gateway": "node src/anchor/AnchorGateway.js",
+    "plan": "node src/cli/cyberkube-plan.js",
+    "apply": "node src/cli/cyberkube-apply.js",
+    "audit:run": "node src/cli/cyberkube-audit-run.js",
+    "test": "node --test"
+  },
+  "author": "Jacob Scott Farmer",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "node-fetch": "^3.3.2",
+    "pino": "^9.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
