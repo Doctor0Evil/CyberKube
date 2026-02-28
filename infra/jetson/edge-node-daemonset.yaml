@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: cyberkube-jetson-edge-agent
+  namespace: cyberkube
+  labels:
+    app: cyberkube
+    component: jetson-edge-agent
+spec:
+  selector:
+    matchLabels:
+      app: cyberkube
+      component: jetson-edge-agent
+  template:
+    metadata:
+      labels:
+        app: cyberkube
+        component: jetson-edge-agent
+    spec:
+      nodeSelector:
+        kubernetes.io/arch: arm64
+        cyberkube/edge-class: jetson
+      tolerations:
+        - key: "node-role.kubernetes.io/edge"
+          operator: "Exists"
+          effect: "NoSchedule"
+      containers:
+        - name: jetson-edge-agent
+          image: your-registry/cyberkube-jetson-edge-agent:0.1.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: cyberkube-config
+          env:
+            - name: CYBERKUBE_SERVICE
+              value: "jetson-edge-agent"
+            - name: CYBERKUBE_MODE
+              value: "human-integrated"
+            - name: CYBERKUBE_ANCHOR_GATEWAY_URL
+              value: "http://cyberkube-anchor-gateway-svc.cyberkube.svc.cluster.local"
+            - name: JETSON_FAMILY
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['jetson/family']
+            - name: JETSON_POWER_MODE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.labels['jetson/power-mode']
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+          volumeMounts:
+            - name: dev-power
+              mountPath: /sys/class/power_supply
+              readOnly: true
+      volumes:
+        - name: dev-power
+          hostPath:
+            path: /sys/class/power_supply
+            type: Directory
