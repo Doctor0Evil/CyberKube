@@ -6,6 +6,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
+  "lint:mermaid": "node scripts/mermaid-lint.js"
     "start:orchestrator": "node src/orchestrator/SwarmScheduler.js",
     "start:health-plane": "node src/health/EdgeSignalIngestor.js",
     "start:policy-engine": "node src/security/SwarmPolicyEngine.js",
