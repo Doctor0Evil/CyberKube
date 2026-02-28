@@ -1,0 +1,151 @@
+HUMAN‑INTEGRATED‑TECHNOLOGY LICENSE
+Version 1.0
+
+Licensor / Neurorights‑Bound Identity:
+Primary Bostrom DID: bostrom18sd2ujv24ual9c9pshtxys6j8knh6xaead9ye7
+
+Copyright (c) 2026 Jacob Scott Farmer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Software and associated documentation files (the “Software”), to use, reproduce, modify, and distribute the Software, subject to the following terms and conditions.
+
+1. Definitions
+1.1 “Software” means the code (source and object), configuration files, models, documentation, and any related materials made available under this License.
+
+1.2 “Licensee” means any person or entity who exercises rights under this License.
+
+1.3 “Derivative Work” means any work that is based on, incorporates, or is adapted from the Software, including modifications, translations, adaptations, and any work in which the Software or substantial portions of it are included.
+
+1.4 “Use” means running, executing, interacting with, or otherwise benefiting from the functionality or outputs of the Software, whether directly or through an interface, API, workflow, or service.
+
+1.5 “Material Real‑World Impact” means any use of the Software whose outputs may reasonably be expected to affect, directly or indirectly:
+(a) the life, bodily integrity, or health of a person;
+(b) the property or finances of a person or organization above a non‑trivial threshold;
+(c) a person’s legal status or rights; or
+(d) safety‑critical systems, including but not limited to transportation, medical, industrial, or infrastructure control.
+
+1.6 “Human‑Integrated Operation” means a mode of Use in which one or more identified human users retain effective ability and responsibility to:
+(a) review the outputs of the Software before they are relied upon in contexts of Material Real‑World Impact;
+(b) approve, modify, reject, or override those outputs; and
+(c) trigger an immediate halt or safe‑state for any automated process driven by the Software in such contexts.
+
+1.7 “Non‑Fictive Use” means Use of the Software in a manner that does not misrepresent machine‑generated or machine‑assisted content as exclusively human‑authored where such misrepresentation would reasonably be considered deceptive, fraudulent, or materially misleading to an affected person, regulator, or court.
+
+1.8 “High‑Risk Context” means any Use that involves Material Real‑World Impact.
+
+1.9 “Safety and Compliance Controls” means lawful technical, organizational, or regulatory safeguards implemented to protect security, safety, privacy, or compliance obligations of a third party system or environment.
+
+2. Grant of Rights
+2.1 Subject to full and ongoing compliance with this License, the Licensor hereby grants the Licensee a worldwide, royalty‑free, non‑exclusive, non‑transferable, and non‑sublicensable (except as expressly permitted in Section 3) license to:
+
+(a) use and reproduce the Software;
+(b) create Derivative Works; and
+(c) distribute the Software and Derivative Works,
+
+for any purpose that complies with Sections 4 and 5.
+
+2.2 All rights not expressly granted are reserved by the Licensor.
+
+3. Redistribution and Sublicensing
+3.1 The Licensee may distribute copies of the unmodified Software, provided that:
+
+(a) this License text is included in full with each copy; and
+(b) recipients are informed that their use is subject to this License.
+
+3.2 The Licensee may distribute Derivative Works under this License or a compatible license that does not weaken the obligations in Sections 4 and 5. Any Derivative Work that includes substantial portions of the Software or materially relies on the Software’s models, logic, or outputs:
+
+(a) must not be represented as created solely by humans where AI or machine assistance was material to its creation; and
+(b) must preserve, in substance, the Human‑Integrated Operation and Non‑Fictive Use requirements for all High‑Risk Contexts.
+
+3.3 The Licensee may grant sublicenses only to the extent necessary to allow recipients of the Software or Derivative Works to exercise the rights granted by this License, and any such sublicenses must be no less protective of the Licensor’s rights and the obligations in this License.
+
+4. Human‑Integrated Operation and Prohibited Uses
+4.1 Human‑Integrated Operation (High‑Risk Contexts).
+In any High‑Risk Context, the Licensee must ensure that the Software is only used in Human‑Integrated Operation. In particular, the Licensee must:
+
+(a) design and operate systems so that humans can meaningfully review, approve, modify, or reject outputs before those outputs are relied upon in High‑Risk Contexts;
+(b) provide clear and effective mechanisms for humans to override or halt automated actions initiated by or based on the Software; and
+(c) avoid configurations in which the Software’s outputs become de facto determinative in High‑Risk Contexts without real human discretion.
+
+4.2 Non‑Fictive Use and Attribution.
+The Licensee must not knowingly:
+
+(a) use the Software to generate or assist in generating content (including text, code, images, audio, video, or structured data) that is presented as exclusively human‑authored in circumstances where such misrepresentation would reasonably be considered deceptive, fraudulent, or materially misleading; or
+(b) omit disclosure of material AI or machine assistance in High‑Risk Contexts where a reasonable person, regulator, or court would expect to know that such assistance occurred.
+
+4.3 Prohibited Conduct.
+The Licensee must not use the Software:
+
+(a) to intentionally generate fabricated evidence, records, or documentation presented as genuine in legal, regulatory, medical, or financial proceedings;
+(b) to intentionally bypass, disable, or defeat Safety and Compliance Controls of third‑party systems or environments;
+(c) to design, operate, or control autonomous weapons systems or other systems whose primary purpose is to cause physical harm; or
+(d) in any manner that knowingly violates applicable law or regulations relating to safety, consumer protection, data protection, or human rights.
+
+4.4 No Use to Coerce Mental Autonomy.
+The Licensee must not design or deploy systems using the Software for the purpose of covertly manipulating, materially impairing, or coercively influencing an individual’s mental autonomy, including undisclosed inference of highly sensitive mental states from biosignals or behavior where such use lacks a lawful basis and explicit, informed consent.
+
+5. Data Governance and Consent
+5.1 Data Responsibility.
+The Licensee is solely responsible for obtaining and maintaining all rights, permissions, and consents necessary for any data processed by the Software, including personal data, biosignals, and community or Indigenous data, and for complying with all applicable data protection and sector‑specific regulations.
+
+5.2 Technical and Organizational Measures.
+The Licensee must implement reasonable technical and organizational measures appropriate to the sensitivity and volume of data processed, including:
+
+(a) access controls, encryption, and audit logging;
+(b) data minimization and retention policies; and
+(c) incident response processes to address unauthorized access, disclosure, alteration, or loss.
+
+5.3 Indigenous and Community Data.
+Where data relates to Indigenous peoples or other communities with recognized data sovereignty frameworks, the Licensee must:
+
+(a) obtain Free, Prior, and Informed Consent (FPIC) or equivalent community consent where required; and
+(b) use such data in a manner consistent with the community’s expressed governance frameworks and agreements, to the extent compatible with applicable law.
+
+6. Compliance, Logging, and Audit
+6.1 Logging.
+For High‑Risk Contexts, the Licensee must maintain logs sufficient to reconstruct:
+
+(a) the version of the Software and models used;
+(b) relevant inputs and outputs (subject to lawful minimization and privacy obligations); and
+(c) any human approvals, overrides, or rejections of the Software’s outputs.
+
+6.2 Audit and Review.
+The Licensee must periodically review their use of the Software in High‑Risk Contexts to verify:
+
+(a) that Human‑Integrated Operation is maintained;
+(b) that Non‑Fictive Use requirements are observed; and
+(c) that data governance measures remain appropriate.
+
+7. Warranty Disclaimer
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON‑INFRINGEMENT, AND ANY WARRANTY THAT USE OF THE SOFTWARE WILL BE ERROR‑FREE OR RISK‑FREE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH THE LICENSEE.
+
+8. Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE LICENSOR OR ANY CONTRIBUTOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+IN ANY CASE, THE TOTAL AGGREGATE LIABILITY OF THE LICENSOR AND CONTRIBUTORS UNDER THIS LICENSE FOR ALL CLAIMS RELATING TO THE SOFTWARE SHALL NOT EXCEED ONE HUNDRED U.S. DOLLARS (USD $100).
+
+9. Indemnification
+The Licensee agrees to defend, indemnify, and hold harmless the Licensor and its contributors from and against any and all claims, damages, liabilities, costs, and expenses (including reasonable attorneys’ fees) arising out of or related to:
+
+(a) the Licensee’s Use of the Software or any Derivative Work;
+(b) the Licensee’s violation of this License; or
+(c) the Licensee’s violation of any applicable law, regulation, or third‑party right.
+
+10. Termination
+10.1 Automatic Termination.
+This License and all rights granted to the Licensee under it automatically terminate, without notice, if the Licensee materially breaches Sections 3, 4, or 5.
+
+10.2 Effect of Termination.
+Upon termination, the Licensee must cease all Use of the Software and any Derivative Works and destroy or permanently delete all copies in their possession or control, except to the extent retention is required by law.
+
+10.3 No Waiver.
+Failure of the Licensor to enforce any provision of this License shall not be deemed a waiver of any rights.
+
+11. Miscellaneous
+11.1 Governing Law.
+Unless otherwise required by applicable law, this License shall be governed by and construed in accordance with the laws of [choose jurisdiction], without regard to its conflict of laws principles.
+
+11.2 Severability.
+If any provision of this License is held to be invalid or unenforceable, that provision shall be construed to reflect the parties’ original intent as closely as possible, and the remaining provisions shall remain in full force and effect.
+
+11.3 Entire Agreement.
+This License constitutes the entire agreement between the Licensor and the Licensee concerning the Software and supersedes all prior or contemporaneous agreements, understandings, or representations regarding the Software.
