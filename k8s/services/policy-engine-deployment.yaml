@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cyberkube-policy-engine
+  namespace: cyberkube
+  labels:
+    app: cyberkube
+    component: policy-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cyberkube
+      component: policy-engine
+  template:
+    metadata:
+      labels:
+        app: cyberkube
+        component: policy-engine
+    spec:
+      containers:
+        - name: policy-engine
+          image: your-registry/cyberkube-policy-engine:0.1.0
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: cyberkube-config
+          env:
+            - name: CYBERKUBE_SERVICE
+              value: "policy-engine"
+          ports:
+            - name: http
+              containerPort: 8082
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cyberkube-policy-engine-svc
+  namespace: cyberkube
+spec:
+  selector:
+    app: cyberkube
+    component: policy-engine
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8082
