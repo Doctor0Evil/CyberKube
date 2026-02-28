@@ -1,0 +1,45 @@
+flowchart TD
+  subgraph L1 "Platform Hardening"
+    H1[Hardened OS Images\n(Action 11)]
+    H2[Sandboxed Swarm Processes\n(Action 12)]
+    H3[Golden Image & CI Supply Chain\n(Action 13)]
+    H4[Physical Security of Edge Nodes\n(Action 14)]
+  end
+
+  subgraph L2 "Secure Channels & Consensus"
+    C1[End-to-End Encrypted Channels\n(Action 6)]
+    C2[Secure Gossip & Consensus\n(Action 7)]
+    C3[Topology Segmentation & Blast Radius\n(Action 8)]
+    C4[Jamming / Interference Resilience\n(Action 9)]
+  end
+
+  subgraph L3 "Active Defense"
+    A1[Distributed Anomaly Detection\n(Action 15)]
+    A2[Emergent Behaviour Security\n(Action 16)]
+    A3[Red-Team Swarm Drills\n(Action 17)]
+    A4[Quarantine Strategies\n(Action 18)]
+    A5[Security Telemetry → Policy Loop\n(Action 19)]
+  end
+
+  subgraph L4 "Governance & Audit"
+    G1[Formal Human-Integrated Proofs\n(Action 20)]
+    G2[Run Envelopes & Multi-Ledger Anchors\n(Action 21)]
+    G3[Least-Privilege Policy Mining\n(Action 22)]
+    G4[Operator UX for Approvals\n(Action 23)]
+    G5[Regulator & Neurorights Co-Design\n(Action 24)]
+  end
+
+  H1 --> C1
+  H2 --> C1
+  H3 --> C1
+  C1 --> A1
+  C2 --> A2
+  A1 --> A4
+  A2 --> A4
+  A3 --> A5
+  A4 --> G2
+  A5 --> G3
+  G1 --> G2
+  G2 --> G4
+  G3 --> G4
+  G4 --> G5
