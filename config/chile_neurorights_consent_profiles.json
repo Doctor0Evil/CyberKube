@@ -1,0 +1,64 @@
+{
+  "$schema": "https://cyberkube.org/schema/chile-neurorights-consent-profiles-v1.json",
+  "jurisdiction": "CL",
+  "law": "21.469",
+  "version": "1.0.0",
+  "profiles": {
+    "cl-low-risk-observational": {
+      "description": "Non-invasive, read-only monitoring of biosignals or behavior with explicit consent; no direct neural write or invasive stimulation.",
+      "riskClasses": ["neuro-read", "neuro-analytics"],
+      "requireExplicitConsent": true,
+      "requireHumanOversight": false,
+      "allowAutonomousExecution": true,
+      "logLevel": "standard",
+      "dataConstraints": {
+        "allowRawWaveformsOffDevice": false,
+        "allowDerivedFeaturesOffDevice": true,
+        "maxRetentionDays": 30
+      }
+    },
+    "cl-medical-therapeutic": {
+      "description": "Clinical therapeutic use (e.g., deep brain stimulation, adaptive implants) under medical supervision.",
+      "riskClasses": ["neural-write", "stimulation", "personality-drift"],
+      "requireExplicitConsent": true,
+      "requireHumanOversight": true,
+      "allowAutonomousExecution": false,
+      "logLevel": "enhanced",
+      "dataConstraints": {
+        "allowRawWaveformsOffDevice": true,
+        "allowDerivedFeaturesOffDevice": true,
+        "maxRetentionDays": 365
+      }
+    },
+    "cl-research-controlled": {
+      "description": "Research use with ethics approval and explicit informed consent; may involve experimental stimulation.",
+      "riskClasses": ["neuro-read", "neural-write", "stimulation"],
+      "requireExplicitConsent": true,
+      "requireHumanOversight": true,
+      "allowAutonomousExecution": false,
+      "logLevel": "enhanced",
+      "dataConstraints": {
+        "allowRawWaveformsOffDevice": true,
+        "allowDerivedFeaturesOffDevice": true,
+        "maxRetentionDays": 730
+      }
+    },
+    "cl-prohibited-contexts": {
+      "description": "Contexts prohibited under neurorights (e.g., covert manipulation, unauthorized inference of highly sensitive mental states).",
+      "riskClasses": [
+        "covert-mental-state-inference",
+        "coercive-influence",
+        "weaponized-neurotech"
+      ],
+      "requireExplicitConsent": false,
+      "requireHumanOversight": false,
+      "allowAutonomousExecution": false,
+      "logLevel": "enhanced",
+      "dataConstraints": {
+        "allowRawWaveformsOffDevice": false,
+        "allowDerivedFeaturesOffDevice": false,
+        "maxRetentionDays": 0
+      }
+    }
+  }
+}
