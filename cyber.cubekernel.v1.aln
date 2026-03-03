@@ -1,0 +1,32 @@
+namespace CyberKube v1
+
+import EcoMetrics.EcoVector
+import ResourceWorkload.RowShard
+import ResourcePerformance.RpmShard
+
+record CyberKubeNodeId
+  hostdid       string     // Bostrom / ALN DID
+  kubekey       string     // stable node key (non-blacklisted hash or UUID)
+  region        string     // e.g. "phoenix.az.us"
+  mobilitykind  enum STATIC, MOBILE, EDGE_GW, XR_RIG
+  platformkind  enum RUST_EDGE, KOTLIN_ANDROID, JS_GATEWAY, MCU_SWARM
+
+record CyberKubePattern
+  patternid      string
+  kind           enum NEURO_SWARM, AI_CHAT_TUNNEL, PROM_NODE, XR_FIELD_RIG
+  topology       enum STAR, MESH, RING, HYBRID
+  hopbudget      u16           // max hops per event
+  jittermax_ms   u32           // QoS envelope
+  energy_profile EcoVector     // expected Joules / gCO2e per step
+  safety_tag     string        // links to RoH corridor / neurorights envelope
+  mobility_scope enum ON_BODY, LOCAL_CELL, REGIONAL_MESH
+
+record CyberKubeBinding
+  node           CyberKubeNodeId
+  pattern        CyberKubePattern
+  topics         list<string>  // ALN bus topics (neuro.*, swarm.*, prom.*)
+  rowref         string        // RowShard.rowid
+  rpmref         string        // RpmShard.rpmid
+  active         bool
+  created_at     datetime
+  updated_at     datetime
